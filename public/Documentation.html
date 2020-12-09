@@ -19,8 +19,28 @@
         </div>
         <div class="container">
 
-
-            
+            <p>
+                The Center for Responsive Politics /also known as OpenSecrets\ allows their data to be accessed via API /Application Programming Interface\ calls.
+                <br>Users that register for this feature are allowed access and are given API keys that are used for authorization purposes when calling the data through Javascript.
+                <br>The API documentation listed on the opensecrets.org website provides a variety of functions that return different data depending on what a user may need.
+                <br> In our case, the following methods were used:
+            </p>
+            <ul>
+                <lh>the getLegislators method is essentially the most general function, and returns a list of current Congress legislators and representatives associated for each state.</lh>
+                <li>getLegislators</li>
+                <li>candContrib</li>
+                <li>candIndustry</li>
+                <li>candSummary</li>
+            </ul>
+            <p>
+                As for the rest of the functions, their method names are offer a fairly concise, if not vague, description of what they return.
+                <br>The Contrib function returns the top contributors to a candidate for the indicated period /sourced from https://www.opensecrets.org/open-data/api-documentation\.
+                <br>The Industry funbction return the top industries to a candidate for the indicated period /sourced from https://www.opensecrets.org/open-data/api-documentation\.
+                <br>The Summary function returns summary contribution on a candidate for the indicated period /Guess where this was sourced from?\.
+            </p>
+            <p>
+                After making the API calls and getting JSON objects in return, we sorted through them and pulled out the important bits that were to be displayed along with our map.
+            </p>
         </div>
     </div>
     <script src="script.js"></script>
