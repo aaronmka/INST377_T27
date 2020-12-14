@@ -1,40 +1,58 @@
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Results</title>    
-  
-  </head>
-  <body>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>   
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> 
+    </head>
+    <body>
+
       <div class="wrapper">
-          <div class="header">
-              <nav>
-                  <ul>
-                      <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Documentation.html">Document</a></li>
-            
-                  </ul>
-                </nav>
+        
+        <nav class="navbar is-dark has-shadow is-white">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://www.ischool.umd.edu/" target="_blank">
+              <img src="img/WhiteiSchoolLogo.png" style="max-height: 45px;">
+            </a>
+            <a class="navbar-burger" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </a>
           </div>
-          <div class="container">
-            <h1>Our project idea focuses transparency in politics, specifically regarding legislative funding.</h1>
-             <p>Many people are unaware of the various political intricacies present with the United States Government.
-               <br>Using an API offered by The Center for Responsive Politics, we gathered some important financial data about the representatives and senators of each state.
-               <br>While our adaptation of the API does not cover an extensive field of political and financial data, it does cover the following things which the average person may find useful:
-             </p>
-             <ul>
-               <li>Top general contributors for a given representative/senator</li>
-               <li>Top industries that support a given representative/senator</li>
-               <li>Summary data for a representative/senator that includes total funding data among other statistics</li>
-               </ul>
-              <p>While our project is unlikely to provide any groundbreaking insight into a politician's financial activity,
-                <br>we do hope that people can use the information we've condensed as a point of reference when thinking about who they want to support.
-                <br>A condensed map of the United States which displays data upon click is presented, and will display the data mentioned earlier.
+          <div class="navbar-menu" id="nav-links">
+            <!-- <div class="navbar-end"> -->
+              <a class="navbar-item center" href="index.html">Home</a>
+              <a class="navbar-item" href="About.html">About</a>
+              <a class="navbar-item" href="Documentation.html">Document</a>
+            <!-- </div> -->
+          </div>
+        </nav>
+        
+        
+          <section class="section">
+            <div class="container">
+              <h1>Our project idea focuses transparency in politics, specifically regarding legislative funding.</h1>
+              <p>Many people are unaware of the various political intricacies present with the United States Government.
+              Using an API offered by The Center for Responsive Politics, we gathered some important financial data about the representatives and senators of each state.
+              While our adaptation of the API does not cover an extensive field of political and financial data, it does cover the following things which the average person may find useful:
               </p>
-              
-          </div>
+              <ul>
+                <li>Top general contributors for a given representative/senator</li>
+                <li>Top industries that support a given representative/senator</li>
+                <li>Summary data for a representative/senator that includes total funding data among other statistics</li>
+              </ul>
+              <p>While our project is unlikely to provide any groundbreaking insight into a politician's financial activity,
+              we do hope that people can use the information we've condensed as a point of reference when thinking about who they want to support.
+              A condensed map of the United States which displays data upon click is presented, and will display the data mentioned earlier.
+              </p>
+            </div>  
+          </section>
+                
+        
       </div>
-      <script src="script.js"></script>
-  </body>
-  </html>
+      <script src="js/bulma_script.js"></script>
+    </body>
+    </html>

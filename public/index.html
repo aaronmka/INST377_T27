@@ -1,113 +1,123 @@
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- Make that pretty -->
-    <h1 class = "header">
-      INST377 Group 27 Final Project
-    </h1>
-    <link rel = "stylesheet" href="styles.css">
-    <script src="map/raphael.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-      crossorigin="anonymous">
-    </script>
-    <script src="map/jquery.usmap.js"></script>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <script src="map/raphael.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous">
+        </script>
+        <script src="map/jquery.usmap.js"></script>
+    </head>
 
-</head>
-<body>
-    <section class = "hero">
-            <div class = "hero-body">
-                <!-- <div class = "container"> -->
-                    <h1 class = "title">
-                        Home Page
-                    </h1>
-        <div class="columns">
-            <div class="column">
-                <a href="index.html">Home</a>
-            </div>
-            <div class ="column">
-                <a href="About.html">About</a>
-            </div> 
-            <div class ="column">
-                <a href="Documentation.html">Document</a>
-            </div>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar is-dark has-shadow is-white">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://www.ischool.umd.edu/" target="_blank">
+                        <img src="img/WhiteiSchoolLogo.png" style="max-height: 45px;">
+                    </a>
+                    <a class="navbar-burger" id="burger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+        
+                    </a>
+                  </div>
+                <div class="navbar-menu is-dark"  id="nav-links">
+                    <div class="navbar-end">
+                        <a class="navbar-item is-white" href="index.html">Home</a>
+                        <a class="navbar-item" href="About.html">About</a>
+                        <a class="navbar-item" href="Documentation.html">Document</a>
+                    </div>
+                </div>
+            </nav>
+            <section class="section">
+                <div class="container">
+                    <div class="map" style="width: 930px; height: 630px; border: solid 3px white;"></div>
+                    <!--  -->
+                    <p class="subtitle">Tip: To get started, click on a state</p>
+                </div>
+            </section>
+
+            <!-- <section class="section"> -->
+                <div class="columns">
+                    <div class="column is-2 ml-5 mr-3">
+
+                        <div class="filter_Box">
+                            <form class="filters" style="border: white;">
+                                <label>Filter Menu</label> <br>
+                                <input type="checkbox" name="Representatives" id="checkbox_1">
+                                <label for="checkbox_1">Representatives</label><br>
+                                <input type="checkbox" name="Senators" id="checkbox_2">
+                                <label for="checkbox_2">Senators</label><br>
+                                <input type="checkbox" name="D" id="checkbox_3">
+                                <label for="checkbox_3">Democrats</label><br>
+                                <input type="checkbox" name="R" id="checkbox_4">
+                                <label for="checkbox_4">Republicans</label><br>
+                                <button type="submit">Filter</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                    
+                        <div class="container py-4">
+                        <p class="subtitle" id="chosen_State">The State you have chosen is: </p>
+                            <select name="legislators" class="l_select">
+
+                                <option value="">Choose A Legislator</option>
+
+                            </select>
+                        </div>
+
+                        <div class="container mb-4 mt-3">
+                        
+                            <div class="org_Contr">
+                                <p class="title">Top Contributors By Organizations As of 2020</p>
+                                <div class="org_results">
+                                    <ol class="org_results_list">
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="ind_Contr">
+                                <p class="title">Top Contributions by Industry As of 2020</p>
+                                <div class="ic_results">
+                                    <ol class="result_list"></ol>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="cand_summary">
+                                <p class="title">Contact Info</p>
+                                <div class="ci_results">
+                                    <ol class="ci_list">
+                                        
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>  
+                    
+                    </div>
+                        
+                </div>   
+                
+                
+            <!-- </section> -->
         </div>
-    </div>
-</div>
-</section>
-        <!-- <div class="header">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                  <li><a href="About.html">About</a></li>
-                  <li><a href="Documentation.html">Document</a></li>
-          
-                </ul>
-              </nav>
-        </div> -->
-        <div class="container">
-
-            <div class="map" style="width: 930px; height: 630px; border: solid 3px black;"></div>
-            <div class="results">
-                <div class="dropdown">
-                  <p class="chosen_State"></p>
-                    <select name="legislators" class="l_select">
-
-                        <option value="">Choose A Legislator</option>
-
-                    </select>
-                </div>
-              </div>
-
-                <div class="top_contr">
-                  <p>Top Contributors</p>
-                  <div class="tc_results">
-
-                  </div>
-                </div>
-
-                <div class="ind_Contr">
-                  <p>Top Contributions by Industry</p>
-                  <div class="ic_results">
-
-                  </div>
-                </div>
-
-                <div class="cand_summary">
-                  <p>Summary Data for Candidates</p>
-                  <div class="cs_results">
-
-                  </div>
-                </div>
-
-                <div class="contributions_industry">
-
-                </div> 
-
-             
-            <div class="filter_Box">
-              <form class="filters">
-                  <input type="checkbox" name="Representatives" id="checkbox_1">
-                  <label for="checkbox_1">Representatives</label>
-                  <input type="checkbox" name="Senators" id="checkbox_2">
-                  <label for="checkbox_2">Senators</label>
-                  <input type="checkbox" name="D" id="checkbox_3">
-                  <label for="checkbox_3">Democrats</label>
-                  <input type="checkbox" name="R" id="checkbox_4">
-                  <label for="checkbox_4">Republicans</label>
-                  <button type="submit">Filter</button>
-              </form>
-          </div>
- 
-       <script src="map/map.js"></script>
-       <script src="script.js"></script>
-            <!-- </div> -->
+        <script src="js/bulma_script.js"></script>
+        <script src="js/script.js"></script>
+        
                 
     </body>
-  </html>          
-  
+</html>

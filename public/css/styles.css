@@ -1,0 +1,61 @@
+.navbar.is-dark {
+  background-color:#261C24 !important;
+  color: white !important;
+}
+
+.navbar-menu {
+  background-color: #2f232d !important;
+}
+
+.wrapper {
+  background-color:#091326 !important;
+  min-width: fit-content;
+  font-size: 1.5em !important;
+  color: white !important;
+}
+
+.title, .subtitle, .navbar-item {
+  color: white !important;
+}
+
+#chosen_State {
+  background-color: #2f232d !important;
+  max-width: 700px !important;
+}
+
+.org_contr, .ind_Contr, .cand_summary {
+  margin-bottom: 10rem !important;
+  
+} 
+
+.results {
+  background-color: #261C24 !important; 
+  margin-bottom: 15rem !important;
+  
+}
+
+.ic_results, .org_results {
+  background-color: #2f232d !important;
+  min-height: 360px !important;
+  max-width: 700px !important;
+}
+
+.ci_results {
+  min-height: 100px !important;
+  background-color: #2f232d !important;
+  max-width: 1170px !important;
+
+}
+
+.ci_list {
+  list-style-type: none;
+}
+
+.l_select {
+  align-content: space-around !important;
+}
+
+.filter_box {
+  background-color: black;
+  max-width: 200px !important;
+}
